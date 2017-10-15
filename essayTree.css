@@ -1,0 +1,98 @@
+body{
+  background-color: rgba(93,186,114,0.8);
+  height: auto;
+  width: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+  color: rgba(245,245,245,0.8);
+}
+
+#idea{
+  height: 175px;
+}
+
+#ideaText{
+  height: 175px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.0);
+  border: 5px solid rgba(80,140,200,0.8);
+  outline-style: none;
+}
+
+#description{
+  height: 300;
+  background-color: rgba(150,100,189,0.8);
+  font-size: 1 em;
+}
+
+.w3-row{
+  height: 350px;
+}
+
+.w3-col{
+  height: 350px;
+}
+
+.bodyText{
+  width: 100%;
+  height: 285px;
+  background: rgba(0,0,0,0.0);
+}
+
+.evidenceText{
+  width: 100%;
+  height: 285px;
+  background: rgba(0,0,0,0.0);
+}
+
+#selectEvidence{
+  float: left;
+}
+
+#saveInfo{
+  float: right;
+}
+
+.w3-row#info{
+  height: 150px;
+}
+
+.w3-col#urlSpace{
+  height: 150px;
+}
+
+.w3-col#citationSpace{
+  height: 150px;
+}
+
+#urlText{
+  width: 100%;
+  height: 150px;
+  background: rgba(0,0,0,0.0);
+}
+
+#citationText{
+  width: 100%;
+  height: 150px;
+  background: rgba(0,0,0,0.0);
+}
+
+#conclusion{
+  height: 175px;
+}
+
+#conclusionText{
+  height: 175px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.0);
+  border: 5px solid rgba(80,140,250,0.8);
+  outline-style: none;
+}
