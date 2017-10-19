@@ -1,5 +1,7 @@
 <?php
 	include_once 'header.php';
+
+  #session_start();
 ?>
 
 <link rel="stylesheet" type="text/css" href="essayTree.css">
@@ -265,17 +267,19 @@
 					cleanAll();
 					formatAll();
 
-					$.post("newEssayTree.php", {all: all},
-						function(){
-							var name = prompt("Please enter the name of your essay tree.");
+					var sendInfo = function(){
+            var name = prompt("Please enter the name of your essay tree.");
 
-							while(name == ""){
-								name = prompt("You must enter a name for your essay tree.");
-							}
+            while(name == ""){
+              name = prompt("You must enter a name for your essay tree.");
+            }
 
-							$.post("newEssayTree.php",{name: name}, function(){console.log(name + " " + all);});
-						}
-					);
+            $.post("includes/saveEssay.inc.php",{name: name, all: all}, function(){
+              window.location.href = "account.php";
+            });
+          };
+
+          sendInfo();
 
 					//$.ajax({
 					//	type: "POST",
@@ -288,12 +292,6 @@
 			});
   		</script> 
 		</head>
-
-		<?php
-			if(isset($_POST['all'])){
-				#header("location: saveEssay.inc.php");
-			}
-		?>
 
 		<body>
   
@@ -412,9 +410,8 @@
     		</div>
 
     		<form id="saveForm" action="includes/saveEssay.inc.php" method="POST">
-				<button type="submit" id="saveButton" style="margin: 27.5px 0px 0px 0px;">Save Your Essay Tree!</button>  
-				<p id="check"></p>   
-			</form>
+				  <button type="submit" id="saveButton" style="margin: 27.5px 0px 0px 0px;">Save Your Essay Tree!</button>    
+			  </form>
 
   		</div>
 

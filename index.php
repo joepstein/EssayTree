@@ -17,7 +17,7 @@
 			if(isset($_SESSION['active']) && $_SESSION['active'] == 0 AND !empty($_SESSION['u_id'])){
 				echo "<div class='activation'>Please activate your account before logging in!</div>";
 			} elseif(isset($_SESSION['active']) && $_SESSION['active'] == 1 AND !empty($_SESSION['u_id'])){
-				header("location: account.php");
+				header("Location: account.php");
 			}
 		?>
 		<h2>Home</h2>
